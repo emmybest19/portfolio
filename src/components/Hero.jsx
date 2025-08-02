@@ -11,7 +11,7 @@ const Hero = () => {
 
   return (
     <section className="min-h-screen w-full flex  bg-gray-50 pt-20 dark:bg-inherit dark:text-white ">
-      <div className=" max-w-7xl mx-auto px-6 md:px-4 flex flex-col md:flex-row md:justify-between md:items-center gap-5 md:gap-16 mt-20">
+      <div className=" max-w-7xl mx-auto px-6 md:px-10 flex flex-col md:flex-row md:justify-between md:items-center gap-5 md:gap-16 mt-20">
         
         {/* Left content */}
         <div data-aos="slide-right" className="">
