@@ -21,7 +21,7 @@ const Hero = () => {
         data-aos-delay="1000"
         data-aos-easing="ease-in-out"
         className="flex-1 max-w-2xl">
-          <h1 className="text-3xl sm:text-4xl  md:text-5xl  text-gray-800 mb-6 dark:text-white/80">
+          <h1 className="text-2xl sm:text-4xl font-bold  md:text-5xl  text-gray-800 mb-6 dark:text-white/80">
             Hi, I'm Emmanuel Ebri
           </h1>
           <p className="text-lg sm:text-xl md:text-2xl text-gray-700 mb-6 dark:text-white/80">
