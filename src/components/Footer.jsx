@@ -44,7 +44,7 @@ const Footer = () => {
 
           {/* LinkedIn */}
           <a
-            href="linkedin.com/in/emmanuel-ebri-9183a6243"
+            href="https://www.linkedin.com/in/emmanuel-ebri-9183a6243/"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-blue-500  transition"
