@@ -35,16 +35,15 @@ const services = [
 ];
 
 const techStack = [
-  { name: "HTML", icon: <FaHtml5 className="text-orange-500 text-2xl md:text-4xl" /> },
-  { name: "CSS", icon: <FaCss3Alt className="text-blue-600 text-2xl md:text-4xl" /> },
-  { name: "JavaScript", icon: <FaJs className="text-yellow-400 text-2xl md:text-4xl" /> },
-  { name: "React", icon: <FaReact className="text-cyan-500 text-2xl md:text-4xl" /> },
-  { name: "Node.js", icon: <FaNodeJs className="text-green-600 text-2xl md:text-4xl" /> },
-  { name: "TypeScript", icon: <SiTypescript className="text-blue-600 text-2xl md:text-4xl" /> },
-  { name: "MongoDB", icon: <SiMongodb className="text-green-600 text-2xl md:text-4xl" /> },
-  { name: "MySQL", icon: <SiMysql className="text-blue-400 text-2xl md:text-4xl" /> },
+  
+  { name: "JavaScript", icon: <FaJs className="text-yellow-400 text-xl md:text-4xl" /> },
+  { name: "React", icon: <FaReact className="text-cyan-500 text-xl md:text-4xl" /> },
+  { name: "Node.js", icon: <FaNodeJs className="text-green-600 text-xl md:text-4xl" /> },
+  { name: "TypeScript", icon: <SiTypescript className="text-blue-600 text-xl md:text-4xl" /> },
+  { name: "MongoDB", icon: <SiMongodb className="text-green-600 text-xl md:text-4xl" /> },
+  { name: "MySQL", icon: <SiMysql className="text-blue-400 text-xl md:text-4xl" /> },
  
-  { name: "Git", icon: <FaGitAlt className="text-red-500 text-2xl md:text-4xl" /> },
+  { name: "Git", icon: <FaGitAlt className="text-red-500 text-xl md:text-4xl" /> },
 ];
 
 const Services = () => {
@@ -109,14 +108,14 @@ const Services = () => {
           <div className="absolute top-0 right-0 w-16 h-full bg-gradient-to-l from-white dark:from-inherit to-transparent z-10 pointer-events-none" /> */}
 
          
-          <div className="flex justify-between items-center px-4 py-4 ">
+          <div className="flex justify-between items-center px-2 md:px-4 py-4 ">
             {techStack.map((tech, i) => (
               <div
                 key={i}
-                className="flex-shrink-1 flex flex-col justify-between items-center "
+                className=" flex flex-col justify-between items-center gap-2"
               >
                 {tech.icon}
-                <span className="mt-2 md:text-sm text-[10px] text-white dark:text-white/80">
+                <span className="mt-2 md:text-sm text-[8px] text-white dark:text-white/80">
                   {tech.name}
                 </span>
               </div>
