@@ -16,7 +16,7 @@ const allProjects = [
     image: "/assets/pic2.jpg",
     tech: ["React", "TailwindCSS", "Framer Motion"],
     category: "frontend",
-    live: "#",
+    live: "https://ebri-emmanuel-portfolio.vercel.app/",
     code: "#",
     span: "col-span-2 row-span-1",
   },
@@ -76,8 +76,7 @@ const allProjects = [
 
 export default function Projects() {
   const [selectedCategory, setSelectedCategory] = useState("all");
-  const [lightboxOpen, setLightboxOpen] = useState(false);
-  const [lightboxImage, setLightboxImage] = useState("");
+  
 
   const filteredProjects =
     selectedCategory === "all"
@@ -130,10 +129,7 @@ export default function Projects() {
               src={project.image}
               alt={project.title}
               loading="lazy"
-              onClick={() => {
-                setLightboxImage(project.image);
-                setLightboxOpen(true);
-              }}
+              
               className="w-full object-cover hover:opacity-90 transition-opacity duration-300 cursor-pointer"
             />
             <div className="p-5">
