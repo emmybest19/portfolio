@@ -1,93 +1,115 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from "react";
 // import Lightbox from 'react-image-lightbox';
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 // import 'react-image-lightbox/style.css';
 
-import 'intersection-observer';
+import "intersection-observer";
+
+import Aos from "aos";
 
 const allProjects = [
   {
-    title: 'Portfolio Website',
-    description: 'A personal portfolio to showcase my skills, projects, and services.',
-    image: 'https://source.unsplash.com/400x300/?website,design',
-    tech: ['React', 'TailwindCSS', 'Framer Motion'],
-    category: 'frontend',
-    live: '#',
-    code: '#',
-    span: 'col-span-2 row-span-1'
+    title: "Portfolio Website",
+    description:
+      "A personal portfolio to showcase my skills, projects, and services.",
+    image: "/assets/pic2.jpg",
+    tech: ["React", "TailwindCSS", "Framer Motion"],
+    category: "frontend",
+    live: "#",
+    code: "#",
+    span: "col-span-2 row-span-1",
   },
   {
-    title: 'E-commerce App',
-    description: 'A full-stack online store with cart and admin dashboard.',
-    image: 'https://source.unsplash.com/400x300/?ecommerce,shop',
-    tech: ['Next.js', 'MongoDB', 'TailwindCSS'],
-    category: 'full-stack',
-    live: '#',
-    code: '#',
-    span: 'col-span-2 row-span-2'
+    title: "E-commerce App",
+    description: "A full-stack online store with cart and admin dashboard.",
+    image: "",
+    tech: ["Next.js", "MongoDB", "TailwindCSS"],
+    category: "full-stack",
+    live: "#",
+    code: "#",
+    span: "col-span-2 row-span-2",
   },
   {
-    title: 'Chat Application',
-    description: 'Real-time messaging app with WebSocket.',
-    image: 'https://source.unsplash.com/400x300/?chat,technology',
-    tech: ['Node.js', 'Socket.IO', 'React'],
-    category: 'full-stack',
-    live: '#',
-    code: '#',
-    span: 'col-span-2 row-span-1'
+    title: "Chat Application",
+    description: "Real-time messaging app with WebSocket.",
+    image: "",
+    tech: ["Node.js", "Socket.IO", "React"],
+    category: "full-stack",
+    live: "#",
+    code: "#",
+    span: "col-span-2 row-span-1",
   },
   {
-    title: 'Blog Platform',
-    description: 'A minimal CMS blog platform built for performance and simplicity.',
-    image: 'https://source.unsplash.com/400x300/?blog,writing',
-    tech: ['Next.js', 'Sanity.io', 'TailwindCSS'],
-    category: 'full-stack',
-    live: '#',
-    code: '#',
-    span: 'col-span-3 row-span-1'
+    title: "Blog Platform",
+    description:
+      "A minimal CMS blog platform built for performance and simplicity.",
+    image: "",
+    tech: ["Next.js", "Sanity.io", "TailwindCSS"],
+    category: "full-stack",
+    live: "#",
+    code: "#",
+    span: "col-span-2 row-span-1",
   },
   {
-    title: 'Fitness App',
-    description: 'Track workouts and monitor progress with this fitness tracker app.',
-    image: 'https://source.unsplash.com/400x300/?fitness,health',
-    tech: ['React Native', 'Firebase'],
-    category: 'frontend',
-    live: '#',
-    code: '#',
-    span: 'col-span-3 row-span-2'
+    title: "Fitness App",
+    description:
+      "Track workouts and monitor progress with this fitness tracker app.",
+    image: "",
+    tech: ["React Native", "Firebase"],
+    category: "frontend",
+    live: "#",
+    code: "#",
+    span: "col-span-2 row-span-2",
   },
   {
-    title: 'Task Manager',
-    description: 'Organize daily activities and boost productivity.',
-    image: 'https://source.unsplash.com/400x300/?task,productivity',
-    tech: ['Vue.js', 'Express.js', 'MongoDB'],
-    category: 'full-stack',
-    live: '#',
-    code: '#',
-    span: 'col-span-2 row-span-1'
-  }
+    title: "Task Manager",
+    description: "Organize daily activities and boost productivity.",
+    image: "",
+    tech: ["Vue.js", "Express.js", "MongoDB"],
+    category: "full-stack",
+    live: "#",
+    code: "#",
+    span: "col-span-2 row-span-1",
+  },
 ];
 
 export default function Projects() {
-  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedCategory, setSelectedCategory] = useState("all");
   const [lightboxOpen, setLightboxOpen] = useState(false);
-  const [lightboxImage, setLightboxImage] = useState('');
+  const [lightboxImage, setLightboxImage] = useState("");
 
-  const filteredProjects = selectedCategory === 'all'
-    ? allProjects
-    : allProjects.filter(p => p.category === selectedCategory);
+  const filteredProjects =
+    selectedCategory === "all"
+      ? allProjects
+      : allProjects.filter((p) => p.category === selectedCategory);
 
+  useEffect(() => {
+    Aos.init({
+      duration: 1000, 
+      easing: "ease-in-out", 
+      once: false,
+    });
+  }, []);
   return (
-    <section id="projects" className="py-20 bg-white dark:bg-gray-900 px-4 sm:px-10">
-      <h2 className="text-4xl font-bold mb-8 text-center text-gray-800 dark:text-white">My Projects</h2>
+    <section
+      id="projects"
+      className="py-20 bg-white dark:bg-gray-900 px-4 sm:px-10 "
+    >
+      <h2 className="text-4xl font-bold mb-8 text-center text-blue-700 dark:text-white" data-aos="fade-down">
+        My Projects
+      </h2>
 
-      <div className="flex justify-center gap-4 mb-12 flex-wrap">
-        {['all', 'frontend', 'full-stack'].map((cat) => (
+      <div className="flex justify-center gap-4 mb-12 flex-wrap items-center">
+        {["all", "frontend", "full-stack"].map((cat) => (
           <button
             key={cat}
             onClick={() => setSelectedCategory(cat)}
-            className={`px-4 py-2 rounded-full text-sm font-medium border ${selectedCategory === cat ? 'bg-blue-600 text-white' : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-white'}`}
+            className={`px-4 py-2 rounded-full text-sm font-medium border ${
+              selectedCategory === cat
+                ? "bg-blue-600 text-white"
+                : "bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-white"
+            }`}
           >
             {cat.charAt(0).toUpperCase() + cat.slice(1)}
           </button>
@@ -99,6 +121,10 @@ export default function Projects() {
           <div
             key={index}
             className={`bg-white dark:bg-gray-800 shadow-xl rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-700 hover:scale-[1.02] hover:shadow-2xl transition-all duration-300 ease-in-out ${project.span}`}
+            data-aos="fade-up"
+            data-aos-delay="300"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-out"
           >
             <img
               src={project.image}
@@ -108,11 +134,15 @@ export default function Projects() {
                 setLightboxImage(project.image);
                 setLightboxOpen(true);
               }}
-              className="w-full h-52 object-cover hover:opacity-90 transition-opacity duration-300 cursor-pointer"
+              className="w-full object-cover hover:opacity-90 transition-opacity duration-300 cursor-pointer"
             />
             <div className="p-5">
-              <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-2">{project.title}</h3>
-              <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">{project.description}</p>
+              <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-2">
+                {project.title}
+              </h3>
+              <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">
+                {project.description}
+              </p>
               <div className="flex flex-wrap gap-2 mb-4">
                 {project.tech.map((tech, i) => (
                   <span
@@ -124,10 +154,20 @@ export default function Projects() {
                 ))}
               </div>
               <div className="flex justify-between text-sm text-blue-600 dark:text-blue-400">
-                <a href={project.live} target="_blank" rel="noopener noreferrer" className="hover:underline">
+                <a
+                  href={project.live}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:underline"
+                >
                   Live Preview
                 </a>
-                <a href={project.code} target="_blank" rel="noopener noreferrer" className="hover:underline">
+                <a
+                  href={project.code}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:underline"
+                >
                   GitHub Repo
                 </a>
               </div>
@@ -136,12 +176,7 @@ export default function Projects() {
         ))}
       </div>
 
-      {lightboxOpen && (
-        <Lightbox
-          mainSrc={lightboxImage}
-          onCloseRequest={() => setLightboxOpen(false)}
-        />
-      )}
+      
     </section>
   );
 }
