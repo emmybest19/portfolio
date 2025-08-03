@@ -10,9 +10,7 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // TODO: Hook this up to your email API or backend
-    console.log("Form Submitted", formData);
-    alert("Thank you for your message!");
+    
     setFormData({ name: "", email: "", message: "" });
   };
 
@@ -45,7 +43,7 @@ const Contact = () => {
               id="name"
               value={formData.name}
               onChange={handleChange}
-              className="w-full p-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-transparent focus:outline-none focus:ring-2 focus:ring-yellow-400"
+              className="w-full p-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-transparent focus:outline-none focus:ring-2 focus:ring-blue-600"
               required
             />
           </div>
@@ -58,7 +56,7 @@ const Contact = () => {
               id="email"
               value={formData.email}
               onChange={handleChange}
-              className="w-full p-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-transparent focus:outline-none focus:ring-2 focus:ring-yellow-400"
+              className="w-full p-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-transparent focus:outline-none focus:ring-2 focus:ring-blue-600"
               required
             />
           </div>
@@ -72,14 +70,14 @@ const Contact = () => {
             rows="5"
             value={formData.message}
             onChange={handleChange}
-            className="w-full p-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-transparent focus:outline-none focus:ring-2 focus:ring-yellow-400"
+            className="w-full p-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-transparent focus:outline-none focus:ring-2 focus:ring-blue-600"
             required
           />
         </div>
 
         <motion.button
           type="submit"
-          className="bg-yellow-400 text-black py-3 px-6 rounded-lg font-bold shadow-md hover:shadow-lg transition duration-300 hover:bg-yellow-500"
+          className="bg-blue-600 text-white py-3 px-6 rounded-lg font-bold shadow-md hover:shadow-lg transition duration-300 hover:bg-blue-60000"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >

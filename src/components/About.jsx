@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const facts = [
-  { id: 1, title: "5+ Years Coding", desc: "Started my journey in 2019, building full-stack apps." },
+  { id: 1, title: "2 Years Coding", desc: "Started my journey in 2019, building full-stack apps." },
   { id: 2, title: "MongoDB + Express", desc: "MERN stack specialist for modern web platforms." },
   { id: 3, title: "E-learning Projects", desc: "Built platforms for remote learning with video & real-time chat." },
   { id: 4, title: "Public Health & Tech", desc: "Merging software skills with public health experience." },
@@ -10,10 +10,10 @@ const facts = [
 
 const About = () => {
   return (
-    <section id="about" className="py-20 px-6 md:px-20 bg-white dark:bg-[#0e0e0e] text-gray-800 dark:text-white">
+    <section className="py-20 px-6 md:px-20 bg-[#090e34] dark:bg-inherit text-gray-300 dark:text-white">
       {/* Section title */}
       <motion.h2
-        className="text-4xl font-bold mb-10 text-center px-4"
+        className="text-4xl font-bold mb-10 text-center px-4 text-blue-600"
         initial={{ opacity: 0, y: -50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
@@ -21,8 +21,8 @@ const About = () => {
         About Me
       </motion.h2>
 
-      <div className="grid md:grid-cols-5 gap-8 items-center">
-        {/* Left: Profile image */}
+      <div className="flex flex-col md:flex-row gap-8 items-center">
+        
         <motion.div
           className="col-span-2 flex justify-center"
           initial={{ opacity: 0, x: -80 }}
@@ -32,18 +32,18 @@ const About = () => {
           <img
             src="/assets/pic2.jpg"
             alt="Profile"
-            className="rounded-2xl shadow-xl object-cover w-screen h-auto "
+            className="rounded-2xl shadow-xl object-cover w-full "
           />
         </motion.div>
 
         {/* Right: Bio and skills */}
         <motion.div
-          className="col-span-3 space-y-6"
+          className="space-y-6"
           initial={{ opacity: 0, x: 80 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7 }}
         >
-          <p className="text-lg leading-relaxed">
+          <p className="text-lg leading-relaxed text-justify">
             I'm a full-stack developer passionate about creating scalable web applications that solve real-world problems. With a background in software engineering and public health, I enjoy combining technical skill with purpose-driven design.
           </p>
 
@@ -55,7 +55,7 @@ const About = () => {
                 whileHover={{ scale: 1.05 }}
               >
                 <h3 className="font-bold text-lg mb-2">{fact.title}</h3>
-                <p className="text-sm text-gray-600 dark:text-gray-300">{fact.desc}</p>
+                <p className="text-sm text-gray-300 dark:text-gray-300">{fact.desc}</p>
               </motion.div>
             ))}
           </div>
