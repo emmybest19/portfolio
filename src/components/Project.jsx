@@ -9,69 +9,27 @@ import "intersection-observer";
 import Aos from "aos";
 
 const allProjects = [
+   {
+    title: "E-commerce App",
+    description: "A frontend online store.",
+    image: "/assets/bond.png",
+    tech: ["React", "Framer Motion", "TailwindCSS"],
+    category: "frontend",
+    live: "https://bond-food.vercel.app/",
+    code: "https://github.com/FrontendSuberu/bond_food",
+    span: "col-span-2 row-span-1",
+  },
   {
     title: "Portfolio Website",
     description:
       "A personal portfolio to showcase my skills, projects, and services.",
-    image: "/assets/pic2.jpg",
+    image: "/assets/portfolio.png",
     tech: ["React", "TailwindCSS", "Framer Motion"],
     category: "frontend",
     live: "https://ebri-emmanuel-portfolio.vercel.app/",
-    code: "#",
+    code: "https://github.com/emmybest19/portfolio",
     span: "col-span-2 row-span-1",
-  },
-  {
-    title: "E-commerce App",
-    description: "A full-stack online store with cart and admin dashboard.",
-    image: "",
-    tech: ["Next.js", "MongoDB", "TailwindCSS"],
-    category: "full-stack",
-    live: "#",
-    code: "#",
-    span: "col-span-2 row-span-2",
-  },
-  {
-    title: "Chat Application",
-    description: "Real-time messaging app with WebSocket.",
-    image: "",
-    tech: ["Node.js", "Socket.IO", "React"],
-    category: "full-stack",
-    live: "#",
-    code: "#",
-    span: "col-span-2 row-span-1",
-  },
-  {
-    title: "Blog Platform",
-    description:
-      "A minimal CMS blog platform built for performance and simplicity.",
-    image: "",
-    tech: ["Next.js", "Sanity.io", "TailwindCSS"],
-    category: "full-stack",
-    live: "#",
-    code: "#",
-    span: "col-span-2 row-span-1",
-  },
-  {
-    title: "Fitness App",
-    description:
-      "Track workouts and monitor progress with this fitness tracker app.",
-    image: "",
-    tech: ["React Native", "Firebase"],
-    category: "frontend",
-    live: "#",
-    code: "#",
-    span: "col-span-2 row-span-2",
-  },
-  {
-    title: "Task Manager",
-    description: "Organize daily activities and boost productivity.",
-    image: "",
-    tech: ["Vue.js", "Express.js", "MongoDB"],
-    category: "full-stack",
-    live: "#",
-    code: "#",
-    span: "col-span-2 row-span-1",
-  },
+  }
 ];
 
 export default function Projects() {

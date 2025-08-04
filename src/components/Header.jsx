@@ -54,7 +54,7 @@ const Header = () => {
           />}</a>
         </div>
 
-        {/* Desktop Navigation */}
+        
         <nav className="hidden lg:flex space-x-6 text-2xl text-gray-700 dark:text-gray-200 font-medium">
           {["home", "services", "projects", "about", "contact"].map((item) => (
             <a
@@ -79,12 +79,12 @@ const Header = () => {
           </button>
 
           <a
-            href="/assets/Emmanuel_Ebri_CV.pdf"
+            href="https://docs.google.com/document/d/17BozDK_pIrNo3kfXTG-r3DWUAcI2oVo4/edit?usp=drive_link&ouid=104472351311393617845&rtpof=true&sd=true"
             target="_blank"
             rel="noopener noreferrer"
             className="hidden md:inline-block bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition text-2xl"
           >
-            Discover Me
+            My CV
           </a>
           <button
             onClick={toggleMobileMenu}
