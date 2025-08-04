@@ -3,6 +3,8 @@ import { useState, useEffect } from "react";
 import { FaSun, FaMoon, FaBars, FaTimes } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
+import { motion } from "framer-motion";
+
 const Header = () => {
   const [isDarkMode, setIsDarkMode] = useState(() => {
     return (
@@ -38,8 +40,8 @@ const Header = () => {
 
   return (
     <header className="fixed top-0 left-0 w-full z-50 bg-white shadow-md dark:bg-gray-900">
-      <div className="max-w-8xl mx-auto px-4 md:px-16 py-3 flex items-center gap-6 justify-between">
-        {/* Logo */}
+      <div className="max-w-7xl mx-auto px-4 md:px-16 py-3 flex items-center gap-6 justify-between">
+        
         <div className="text-2xl font-bold text-gray-800 dark:text-white">
           <a href="#home">{isDarkMode ? <img
             src="/assets/logo-white.png"
@@ -67,7 +69,7 @@ const Header = () => {
           ))}
         </nav>
 
-        {/* Buttons */}
+        
         <div className="flex items-center space-x-3 gap-5">
           
           <button
@@ -82,13 +84,13 @@ const Header = () => {
             href="https://docs.google.com/document/d/17BozDK_pIrNo3kfXTG-r3DWUAcI2oVo4/edit?usp=drive_link&ouid=104472351311393617845&rtpof=true&sd=true"
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden md:inline-block bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition text-2xl"
+            className="hidden lg:inline-block bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition text-2xl"
           >
             My CV
           </a>
           <button
             onClick={toggleMobileMenu}
-            className="md:hidden p-2 rounded-full bg-gray-200 dark:bg-gray-700 transition"
+            className="lg:hidden p-2 rounded-full bg-gray-200 dark:bg-gray-700 transition"
             aria-label="Toggle Menu"
           >
             {isMobileMenuOpen ? <FaTimes size={20} /> : <FaBars size={20} />}
@@ -98,7 +100,9 @@ const Header = () => {
 
       {/* Fullscreen Mobile Menu */}
       <div
-        className={`fixed top-0 left-0 h-screen w-full bg-white dark:bg-gray-900 z-50 transform transition-transform duration-300 ease-in-out md:hidden ${
+        
+        
+        className={`fixed top-0 left-0 h-screen w-3/4 bg-white dark:bg-gray-900 z-50 transform transition-transform delay-150 duration-1000 ease-in-out lg:hidden ${
           isMobileMenuOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
@@ -117,9 +121,9 @@ const Header = () => {
             href="/assets/Emmanuel_Ebri_CV.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-auto bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition"
+            className="mt-auto bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition text-justify flex justify-center items-center"
           >
-            Discover Me
+            My CV
           </a>
         </div>
       </div>
@@ -128,7 +132,7 @@ const Header = () => {
       {isMobileMenuOpen && (
         <div
           onClick={closeMobileMenu}
-          className="fixed inset-0 bg-black bg-opacity-50 z-40 md:hidden"
+          className="fixed inset-0 bg-black bg-opacity-50 z-40 lg:hidden"
         />
       )}
     </header>

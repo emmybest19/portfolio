@@ -20,10 +20,10 @@ const Hero = () => {
         whileInView={{opacity: 1, x: 0}}
         transition={{duration: 2.5}}
         className="flex-1 max-w-2xl">
-          <h1 className="text-2xl sm:text-4xl font-bold  md:text-5xl  text-gray-800 mb-6 dark:text-white/80">
+          <h1 className="text-2xl  font-bold  md:text-3xl lg:text-5xl text-gray-800 mb-6 dark:text-white/80">
             Hi, I'm Emmanuel Ebri
           </h1>
-          <p className="text-lg sm:text-xl md:text-2xl text-gray-700 mb-6 dark:text-white/80">
+          <p className="text-lg sm:text-xl md:text-xl lg:text-2xl text-gray-700 mb-6 dark:text-white/80">
             I'm a{" "}
             <span className="text-blue-600 font-semibold">
               <Typewriter
