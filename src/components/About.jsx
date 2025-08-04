@@ -43,7 +43,7 @@ const About = () => {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7 }}
         >
-          <p className="text-lg leading-relaxed text-justify">
+          <p className="text-lg leading-relaxed ">
             I'm a full-stack developer passionate about creating scalable web applications that solve real-world problems. With a background in software engineering and public health, I enjoy combining technical skill with purpose-driven design.
           </p>
 
