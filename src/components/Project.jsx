@@ -29,6 +29,17 @@ const allProjects = [
     live: "https://ebri-emmanuel-portfolio.vercel.app/",
     code: "https://github.com/emmybest19/portfolio",
     span: "col-span-2 row-span-1",
+  },
+  {
+    title: "Edu Tech App",
+    description:
+      "Build a landing page of an Edu-tech app to showcase my react and Tailwind skills ",
+    image: "/assets/eduTech.png",
+    tech: ["React", "TailwindCSS", "Framer Motion"],
+    category: "frontend",
+    live: "https://my-learn-map.vercel.app/",
+    code: "https://github.com/emmybest19/portfolio",
+    span: "col-span-2 row-span-1",
   }
 ];
 
