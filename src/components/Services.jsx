@@ -50,7 +50,7 @@ const Services = () => {
   }, []);
 
   return (
-    <section className=" bg-[#090e34] relative dark:bg-inherit mt-8 ">
+    <section id="services" className=" bg-[#090e34] relative dark:bg-inherit mt-8 ">
       <div className="max-w-7xl  mx-auto px-4 text-center py-8  ">
         <h2
           className="text-3xl sm:text-4xl font-bold text-blue-600 mb-4 dark:text-blue-700"

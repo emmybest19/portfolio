@@ -10,8 +10,8 @@ const facts = [
 
 const About = () => {
   return (
-    <section className="py-20 px-6 md:px-20 bg-[#090e34] dark:bg-inherit text-gray-300 dark:text-white">
-      {/* Section title */}
+    <section id="about" className="py-20 px-6 md:px-20 bg-[#090e34] dark:bg-inherit text-gray-300 dark:text-white">
+      
       <motion.h2
         className="text-4xl font-bold mb-10 text-center px-4 text-blue-600"
         initial={{ opacity: 0, y: -50 }}

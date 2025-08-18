@@ -7,19 +7,28 @@ import Services from "./components/Services";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import ScrollToTopButton from "./components/ScrollToTopButton";
+import { useState } from "react";
+import Loader from "./components/Loader";
 
 function App() {
+  const [loading, setIsLoading] = useState(true);
   return (
-    <div>
-      <Header />
-      <Hero />
-      <Services />
-      <Projects />
-      <About />
-      <Contact />
-      <Footer />
-      <ScrollToTopButton />
-    </div>
+    <>
+      {loading ? (
+        <Loader onFinish={() => setIsLoading(false)} />
+      ) : (
+        <>
+          <Header />
+          <Hero />
+          <Services />
+          <Projects />
+          <About />
+          <Contact />
+          <Footer />
+          <ScrollToTopButton />
+        </>
+      )}
+    </>
   );
 }
 

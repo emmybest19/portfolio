@@ -12,7 +12,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="min-h-screen w-full px-4 sm:px-5 md:px-5  flex bg-gray-50 pt-20 dark:bg-inherit dark:text-white">
+    <section id="home" className="min-h-screen w-full px-4 sm:px-5 md:px-5  flex bg-gray-50 pt-20 dark:bg-inherit dark:text-white">
       <div className="max-w-7xl mx-auto px-5 md:px-6 flex flex-col md:flex-row gap-5 md:gap-x-16 mt-20 w-full md:justify-between md:items-center">
         {/* Left content */}
         <motion.div 
