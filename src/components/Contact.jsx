@@ -16,7 +16,7 @@ const Contact = () => {
 
   return (
     <section id="contact" className="py-20 px-6 md:px-20 bg-gray-50 dark:bg-[#0e0e0e] text-gray-900 dark:text-white">
-      {/* Section Title */}
+     
       <motion.h2
         className="text-4xl font-bold text-center mb-10"
         initial={{ opacity: 0, y: -50 }}
@@ -26,7 +26,7 @@ const Contact = () => {
         Get in Touch
       </motion.h2>
 
-      {/* Contact Form */}
+      
       <motion.form
         className="max-w-3xl mx-auto bg-white dark:bg-[#1a1a1a] p-8 rounded-2xl shadow-lg space-y-6"
         onSubmit={handleSubmit}

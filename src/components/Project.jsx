@@ -40,6 +40,17 @@ const allProjects = [
     live: "https://my-learn-map.vercel.app/",
     code: "https://github.com/emmybest19/portfolio",
     span: "col-span-2 row-span-1",
+  },
+  {
+    title: "Telemedicine App",
+    description:
+      "This app is to bridge the gap between patients and access to quality of care ",
+    image: "/assets/telemedicine.png",
+    tech: ["React", "TypeScript","TailwindCSS", "Framer Motion"],
+    category: "full-stack",
+    live: "https://telemedicine-app-psi.vercel.app/",
+    code: "https://github.com/emmybest19/telemedicine-app",
+    span: "col-span-2 row-span-1",
   }
 ];
 
