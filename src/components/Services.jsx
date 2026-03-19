@@ -1,48 +1,7 @@
-import React, { useEffect, useRef } from "react";
-import {
-  FaReact,
-  FaNodeJs,
-  FaDatabase,
-  FaJs,
-  FaGitAlt,
-} from "react-icons/fa";
-
+import React, { useEffect } from "react";
+import { services, techStack } from "../data/services.jsx";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import { SiMongodb, SiMysql, SiSupabase, SiTypescript } from "react-icons/si";
-
-const services = [
-  {
-    title: "Frontend Development",
-    description:
-      "Building responsive and dynamic interfaces using React.js, Tailwind CSS, and more.",
-    icon: <FaReact className="text-blue-500 text-4xl" />,
-  },
-  {
-    title: "Backend Development",
-    description:
-      "Creating scalable APIs with Node.js, Express, and integrating MongoDB and MySQL.",
-    icon: <FaNodeJs className="text-green-600 text-4xl" />,
-  },
-  {
-    title: "Database Management",
-    description:
-      "Efficient data modeling and handling with MongoDB, MySQL, and Firebase.",
-    icon: <FaDatabase className="text-yellow-600 text-4xl" />,
-  },
-];
-
-const techStack = [
-  
-  { name: "JavaScript", icon: <FaJs className="text-yellow-400 text-xl md:text-4xl" /> },
-  { name: "React", icon: <FaReact className="text-cyan-500 text-xl md:text-4xl" /> },
-  { name: "Node.js", icon: <FaNodeJs className="text-green-600 text-xl md:text-4xl" /> },
-  { name: "TypeScript", icon: <SiTypescript className="text-blue-600 text-xl md:text-4xl" /> },
-  { name: "MongoDB", icon: <SiMongodb className="text-green-600 text-xl md:text-4xl" /> },
-  { name: "MySQL", icon: <SiMysql className="text-blue-400 text-xl md:text-4xl" /> },
- 
-  { name: "Git", icon: <FaGitAlt className="text-red-500 text-xl md:text-4xl" /> },
-];
 
 const Services = () => {
   useEffect(() => {
@@ -50,10 +9,10 @@ const Services = () => {
   }, []);
 
   return (
-    <section id="services" className=" bg-[#090e34] relative dark:bg-inherit mt-8 ">
-      <div className="max-w-7xl  mx-auto px-4 text-center py-8  ">
+    <section id="services" className="bg-[#090e34] relative dark:bg-inherit mt-8">
+      <div className="max-w-7xl mx-auto px-4 text-center py-8">
         <h2
-          className="text-3xl sm:text-4xl font-bold text-blue-600 mb-4 dark:text-blue-700"
+          className="text-2xl sm:text-3xl font-bold text-blue-600 mb-4 dark:text-blue-700"
           data-aos="fade"
           data-aos-duration="500"
           data-aos-delay="700"
@@ -71,19 +30,19 @@ const Services = () => {
         </p>
 
         {/* Service Cards */}
-        <div className="grid md:grid-cols-3 gap-8 mb-16 ">
+        <div className="grid md:grid-cols-3 gap-8 mb-16">
           {services.map((service, index) => (
             <div
               key={index}
               data-aos="fade-up"
               data-aos-delay={index * 1000}
-              className="bg-gray-100 rounded-xl p-6 shadow hover:shadow-lg transition dark:bg-gray-800 "
+              className="bg-gray-100 rounded-xl p-6 shadow hover:shadow-lg transition dark:bg-gray-800"
             >
               <div className="mb-4 flex justify-center">{service.icon}</div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-2 dark:text-white/60">
+              <h3 className="text-base font-semibold text-gray-800 mb-2 dark:text-white/60">
                 {service.title}
               </h3>
-              <p className="text-gray-600 dark:text-white/60">
+              <p className="text-sm text-gray-600 dark:text-white/60">
                 {service.description}
               </p>
             </div>
@@ -92,7 +51,7 @@ const Services = () => {
 
         {/* Tech Stack */}
         <h3
-          className="text-2xl md:text-3xl text-blue-600 font-semibold mb-4"
+          className="text-xl md:text-2xl text-blue-600 font-semibold mb-4"
           data-aos="slide-left"
           data-aos-delay="400"
           data-aos-duration="800"
@@ -101,16 +60,11 @@ const Services = () => {
           Tech Stack
         </h3>
         <div className="relative px-4">
-          {/* Gradient Edges */}
-          {/* <div className="absolute top-0 left-0 w-16 h-full bg-gradient-to-r from-white to-transparent dark:from-inherit z-10 pointer-events-none" />
-          <div className="absolute top-0 right-0 w-16 h-full bg-gradient-to-l from-white dark:from-inherit to-transparent z-10 pointer-events-none" /> */}
-
-         
-          <div className="flex justify-between items-center px-2 md:px-4 py-4 ">
+          <div className="flex justify-between items-center px-2 md:px-4 py-4">
             {techStack.map((tech, i) => (
               <div
                 key={i}
-                className=" flex flex-col justify-between items-center gap-2"
+                className="flex flex-col justify-between items-center gap-2"
               >
                 {tech.icon}
                 <span className="mt-2 md:text-sm text-[8px] text-white dark:text-white/80">

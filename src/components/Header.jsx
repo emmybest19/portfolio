@@ -1,9 +1,14 @@
-
 import { useState, useEffect } from "react";
+import { NavLink, Link } from "react-router-dom";
 import { FaSun, FaMoon, FaBars, FaTimes } from "react-icons/fa";
-import { Link } from "react-router-dom";
 
-import { motion } from "framer-motion";
+const navItems = [
+  { name: "Home", path: "/" },
+  { name: "Services", path: "/services" },
+  { name: "Projects", path: "/projects" },
+  { name: "About", path: "/about" },
+  { name: "Contact", path: "/contact" },
+];
 
 const Header = () => {
   const [isDarkMode, setIsDarkMode] = useState(() => {
@@ -26,67 +31,68 @@ const Header = () => {
     }
   }, [isDarkMode]);
 
-  const toggleDarkMode = () => {
-    setIsDarkMode(!isDarkMode);
-  };
-
-  const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
-  };
-
-  const closeMobileMenu = () => {
-    setIsMobileMenuOpen(false);
-  };
+  const toggleDarkMode = () => setIsDarkMode(!isDarkMode);
+  const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
+  const closeMobileMenu = () => setIsMobileMenuOpen(false);
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 bg-white shadow-md dark:bg-gray-900">
+    <header className="fixed top-0 left-0 w-full z-50 bg-white shadow-md dark:bg-gray-900 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 md:px-16 py-3 flex items-center gap-6 justify-between">
-        
         <div className="text-2xl font-bold text-gray-800 dark:text-white">
-          <a href="#home">{isDarkMode ? <img
-            src="/assets/logo-white.png"
-            alt=""
-            className="w-20"
-            
-          /> : <img
-            src="/assets/logo-black.png"
-            alt=""
-            className="w-20"
-            
-          />}</a>
+          <Link to="/">
+            {isDarkMode ? (
+              <img
+                src="/assets/logo-white.png"
+                alt="Emmanuel Ebri logo"
+                className="w-20"
+              />
+            ) : (
+              <img
+                src="/assets/logo-black.png"
+                alt="Emmanuel Ebri logo"
+                className="w-20"
+              />
+            )}
+          </Link>
         </div>
 
-        
-        <nav className="hidden lg:flex space-x-6 text-2xl text-gray-700 dark:text-gray-200 font-medium">
-          {["home", "services", "projects", "about", "contact"].map((item) => (
-            <a
-              key={item}
-              href={`#${item}`}
-              className="border-b-2 border-transparent hover:text-blue-600 dark:hover:text-blue-400 hover:border-blue-600 dark:hover:border-blue-400 pb-1 capitalize"
+        <nav
+          className="hidden lg:flex space-x-6 text-base text-gray-700 dark:text-gray-200 font-medium"
+          role="navigation"
+        >
+          {navItems.map((item) => (
+            <NavLink
+              key={item.name}
+              to={item.path}
+              className={({ isActive }) =>
+                `border-b-2 pb-1 transition-colors ${
+                  isActive
+                    ? "text-blue-600 dark:text-blue-400 border-blue-600 dark:border-blue-400"
+                    : "border-transparent hover:text-blue-600 dark:hover:text-blue-400 hover:border-blue-600 dark:hover:border-blue-400"
+                }`
+              }
             >
-              {item}
-            </a>
+              {item.name}
+            </NavLink>
           ))}
         </nav>
 
-        
         <div className="flex items-center space-x-3 gap-5">
-          
           <button
             onClick={toggleDarkMode}
-            className="p-2 rounded-full bg-gray-200 dark:bg-gray-700 transition"
+            className="p-2 rounded-full bg-gray-200 dark:bg-gray-700 transition-colors"
             aria-label="Toggle Dark Mode"
           >
             {isDarkMode ? <FaSun size={20} /> : <FaMoon size={20} />}
           </button>
 
           <a
-            href="https://docs.google.com/document/d/17BozDK_pIrNo3kfXTG-r3DWUAcI2oVo4/edit?usp=drive_link&ouid=104472351311393617845&rtpof=true&sd=true"
+            href="https://drive.google.com/file/d/19sl0viWQtX9N_1CEbPJ3HY1DkSFwR5_5/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden lg:inline-block bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition text-2xl"
+            className="hidden lg:inline-block bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition text-base"
           >
-            My CV
+            My Resume
           </a>
           <button
             onClick={toggleMobileMenu}
@@ -100,30 +106,34 @@ const Header = () => {
 
       {/* Fullscreen Mobile Menu */}
       <div
-        
-        
         className={`fixed top-0 left-0 h-screen w-3/4 bg-white dark:bg-gray-900 z-50 transform transition-transform delay-150 duration-1000 ease-in-out lg:hidden ${
           isMobileMenuOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
         <div className="flex flex-col h-full p-6 pt-20 space-y-6">
-          {["home", "services", "projects", "about", "contact"].map((item) => (
-            <a
-              key={item}
-              href={`#${item}`}
+          {navItems.map((item) => (
+            <NavLink
+              key={item.name}
+              to={item.path}
               onClick={closeMobileMenu}
-              className="text-gray-800 dark:text-gray-100 text-lg hover:text-blue-600 dark:hover:text-blue-400 capitalize"
+              className={({ isActive }) =>
+                `text-lg capitalize transition-colors ${
+                  isActive
+                    ? "text-blue-600 dark:text-blue-400 font-semibold"
+                    : "text-gray-800 dark:text-gray-100 hover:text-blue-600 dark:hover:text-blue-400"
+                }`
+              }
             >
-              {item}
-            </a>
+              {item.name}
+            </NavLink>
           ))}
           <a
-            href="/assets/Emmanuel_Ebri_CV.pdf"
+            href="https://docs.google.com/document/d/17BozDK_pIrNo3kfXTG-r3DWUAcI2oVo4/edit?usp=drive_link&ouid=104472351311393617845&rtpof=true&sd=true"
             target="_blank"
             rel="noopener noreferrer"
             className="mt-auto bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition text-justify flex justify-center items-center"
           >
-            My CV
+            My Resume
           </a>
         </div>
       </div>
