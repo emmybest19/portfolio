@@ -9,7 +9,10 @@ const Services = () => {
   }, []);
 
   return (
-    <section id="services" className="bg-[#090e34] relative dark:bg-inherit mt-8">
+    <section
+      id="services"
+      className="bg-[#090e34] relative dark:bg-inherit mt-8"
+    >
       <div className="max-w-7xl mx-auto px-4 text-center py-8">
         <h2
           className="text-2xl sm:text-3xl font-bold text-blue-600 mb-4 dark:text-blue-700"
@@ -25,7 +28,7 @@ const Services = () => {
           data-aos-delay="1000"
           data-aos-duration="2000"
         >
-          I'm a full-stack developer delivering robust, scalable, and efficient
+          I'm a full-stack engineer delivering robust, scalable, and efficient
           web solutions.
         </p>
 

@@ -11,14 +11,19 @@ const HomePage = () => {
           name="description"
           content="Emmanuel Ebri — Full-stack developer building scalable web applications with React, Node.js, and MongoDB."
         />
-        <meta property="og:title" content="Emmanuel Ebri | Full-Stack Developer" />
+        <meta
+          property="og:title"
+          content="Emmanuel Ebri | Full-Stack Developer"
+        />
         <meta
           property="og:description"
           content="Full-stack developer building scalable web applications with React, Node.js, and MongoDB."
         />
         <meta property="og:type" content="website" />
       </Helmet>
-      <Hero />
+      <div className="pb-14">
+        <Hero />
+      </div>
     </PageTransition>
   );
 };

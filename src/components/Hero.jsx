@@ -27,15 +27,16 @@ const Hero = () => {
           <h1 className="text-xl font-bold md:text-2xl lg:text-4xl text-gray-800 mb-6 dark:text-white/80">
             Hi, I'm Emmanuel Ebri
           </h1>
+
           <p className="text-base sm:text-lg md:text-lg lg:text-xl text-gray-700 mb-6 dark:text-white/80">
-            I'm a{" "}
+            I craft scalable, user-focused digital experiences as a{" "}
             <span className="text-blue-600 font-semibold">
               <Typewriter
                 words={[
-                  "Full-stack Developer",
-                  "Front-end Developer",
-                  "Back-end Developer",
-                  "Database Manager",
+                  "Fullstack Engineer",
+                  "Frontend Engineer",
+                  "Backend Engineer",
+                  // "Database Engineer",
                 ]}
                 loop={0}
                 cursor
@@ -45,6 +46,7 @@ const Hero = () => {
                 delaySpeed={2000}
               />
             </span>
+            , combining clean design with efficient, production-ready code.
           </p>
 
           <Link
