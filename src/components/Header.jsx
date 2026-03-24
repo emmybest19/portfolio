@@ -86,14 +86,14 @@ const Header = () => {
             {isDarkMode ? <FaSun size={20} /> : <FaMoon size={20} />}
           </button>
 
-          <a
+          {/* <a
             href="https://drive.google.com/file/d/19sl0viWQtX9N_1CEbPJ3HY1DkSFwR5_5/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             className="hidden lg:inline-block bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition text-base"
           >
             My Resume
-          </a>
+          </a> */}
           <button
             onClick={toggleMobileMenu}
             className="lg:hidden p-2 rounded-full bg-gray-200 dark:bg-gray-700 transition"
@@ -127,14 +127,14 @@ const Header = () => {
               {item.name}
             </NavLink>
           ))}
-          <a
+          {/* <a
             href="https://docs.google.com/document/d/17BozDK_pIrNo3kfXTG-r3DWUAcI2oVo4/edit?usp=drive_link&ouid=104472351311393617845&rtpof=true&sd=true"
             target="_blank"
             rel="noopener noreferrer"
             className="mt-auto bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition text-justify flex justify-center items-center"
           >
             My Resume
-          </a>
+          </a> */}
         </div>
       </div>
 
