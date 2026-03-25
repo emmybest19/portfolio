@@ -86,14 +86,7 @@ const Header = () => {
             {isDarkMode ? <FaSun size={20} /> : <FaMoon size={20} />}
           </button>
 
-          {/* <a
-            href="https://drive.google.com/file/d/19sl0viWQtX9N_1CEbPJ3HY1DkSFwR5_5/view?usp=sharing"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hidden lg:inline-block bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition text-base"
-          >
-            My Resume
-          </a> */}
+         
           <button
             onClick={toggleMobileMenu}
             className="lg:hidden p-2 rounded-full bg-gray-200 dark:bg-gray-700 transition"
