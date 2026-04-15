@@ -12,6 +12,7 @@ const allProjects = [
       "React Router",
       "Axios",
       "React Context API",
+      "TypeScript",
 
       "React Hook Form",
     ],

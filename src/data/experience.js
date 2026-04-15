@@ -25,7 +25,7 @@ export const experience = [
     type: "work",
     title: "Full-Stack Developer",
     org: "Upsywave Tech Company Ltd",
-    period: "Feb 2025 — Jan2026",
+    period: "Feb 2025 — Jan 2026",
     description:
       "Worked as a full-stack developer building responsive web applications and contributing to backend services where needed, delivering scalable and user-focused solutions using React, Next.js, Node.js, and related technologies",
   },
