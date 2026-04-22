@@ -15,7 +15,7 @@ export const experience = [
     type: "work",
     title: "Frontend Developer",
     org: "Toac Limited",
-    period: "July 2025 — Dec 2025",
+    period: "June 2025 — Present",
     description:
       "Developed a responsive telemedicine platform using React and TailwindCSS, implementing key features such as appointment booking, real-time interaction flows, and intuitive dashboards. Focused on accessibility, performance optimization, and delivering a seamless user experience across devices.",
   },
@@ -25,7 +25,7 @@ export const experience = [
     type: "work",
     title: "Full-Stack Developer",
     org: "Upsywave Tech Company Ltd",
-    period: "Nov 2023 — Oct 2025",
+    period: "Feb 2025 — Jan 2026",
     description:
       "Worked as a full-stack developer building responsive web applications and contributing to backend services where needed, delivering scalable and user-focused solutions using React, Next.js, Node.js, and related technologies",
   },
