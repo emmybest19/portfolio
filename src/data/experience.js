@@ -18,6 +18,8 @@ export const experience = [
       'Building and maintaining scalable backend systems for social media and fintech applications, focusing on secure API development, data management, and system performance using Node.js, Express, and MongoDB.',
   },
 
+  
+
   {
     id: 2,
     type: 'work',
